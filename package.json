@@ -1,0 +1,12 @@
+{
+	"name": "generate-request-mapping-jhipster",
+	"version": "0.0.1",
+	"description": "generate request mapping for jhipster",
+	"license": "MIT",
+	"scripts": {
+		"start": "node index.js"
+	},
+  	"dependencies": {
+    	"fs": "^0.0.1-security"
+  	}
+}

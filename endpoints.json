@@ -1,0 +1,101 @@
+{
+  "EjeAccionCondicion": {
+    "route": "eje-accion-condicions",
+    "EjeValoracion": {
+      "method": ["get", "put", "delete"],
+      "rel": "EjeValoracion{accionv} to EjeAccionCondicion{valoraciona}"
+    },
+    "EjeIntervencion": {
+      "method": ["get", "put", "delete"],
+      "rel": "EjeIntervencion{accion} to EjeAccionCondicion{intervencion}"
+    },
+    "Agrupador": {
+      "method": ["get", "put", "delete"],
+      "rel": "EjeAccionCondicion{agrupador} to Agrupador{accion}"
+    },
+    "Version": {
+      "method": ["get"],
+      "rel": "EjeAccionCondicion{version} to Version{accion}"
+    }
+  },
+  "EjeAtributo": {
+    "route": "eje-atributos",
+    "EjeValoracion": {
+      "method": ["get"],
+      "rel": "EjeValoracion{atributo} to EjeAtributo{valoracion}"
+    },
+    "Version": {
+      "method": ["get"],
+      "rel": "EjeAtributo{version} to Version{atributo}"
+    }
+  },
+  "EjeBeneficiario": {
+    "route": "eje-beneficiarios",
+    "EjeDiagnostico": {
+      "method": ["get"],
+      "rel": "EjeDiagnostico{beneficiario} to EjeBeneficiario{diagnostico}"
+    },
+    "EjeIntervencion": {
+      "method": ["get"],
+      "rel": "EjeIntervencion{beneficiario} to EjeBeneficiario{intervencion}"
+    },
+    "EjeValoracion": {
+      "method": ["get"],
+      "rel": "EjeValoracion{beneficiario} to EjeBeneficiario{valoracion}"
+    }
+  },
+  "EjeEscalaUnidadDeMedida": {
+    "route": "eje-escala-unidad-de-medidas",
+    "EjeValoracion": {
+      "method": ["get", "put", "delete"],
+      "rel": "EjeValoracion{escala} to EjeEscalaUnidadDeMedida{valoracion}"
+    },
+    "EjeFoco": {
+      "method": ["get", "put", "delete"],
+      "rel": "EjeEscalaUnidadDeMedida{foco} to EjeFoco{escala}"
+    },
+    "EjeJuicio": {
+      "method": ["get", "put", "delete"],
+      "rel": "EjeEscalaUnidadDeMedida{juicio} to EjeJuicio{escala}"
+    },
+    "EjeLocalizacion": {
+      "method": ["get", "put", "delete"],
+      "rel": "EjeEscalaUnidadDeMedida{localizacion} to EjeLocalizacion{escala}"
+    },
+    "EjeProductoMedicamento": {
+      "method": ["get", "put", "delete"],
+      "rel": "EjeEscalaUnidadDeMedida{medicamento} to EjeProductoMedicamento{escala}"
+    },
+    "EjeBeneficiario": {
+      "method": ["get", "put", "delete"],
+      "rel": "EjeEscalaUnidadDeMedida{beneficiario} to EjeBeneficiario{escala}"
+    },
+    "EjeRecursoContexto": {
+      "method": ["get", "put", "delete"],
+      "rel": "EjeEscalaUnidadDeMedida{recurso} to EjeRecursoContexto{escala}"
+    },
+    "EjeTemporalidad": {
+      "method": ["get", "put", "delete"],
+      "rel": "EjeTemporalidad{escala} to EjeEscalaUnidadDeMedida{temporalidad}"
+    }
+  },
+  "EjeLocalizacion": {
+    "route": "eje-localizacions",
+    "EjeDiagnostico": {
+      "method": ["get", "put", "delete"],
+      "rel": "EjeDiagnostico{localizacion} to EjeLocalizacion{diagnostico}"
+    },
+    "EjeIntervencion": {
+      "method": ["get", "put", "delete"],
+      "rel": "EjeIntervencion{localizacion} to EjeLocalizacion{intervencion}"
+    },
+    "EjeValoracion": {
+      "method": ["get", "put", "delete"],
+      "rel": "EjeValoracion{localizacionv} to EjeLocalizacion{valoracionl}"
+    },
+    "EjeEscalaUnidadDeMedida": {
+      "method": ["get"],
+      "rel": "EjeEscalaUnidadDeMedida{localizacion} to EjeLocalizacion{escala}"
+    }
+  }
+}
