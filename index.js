@@ -131,7 +131,7 @@ Object.keys(endpointFiles).forEach(eje => {
             const putRelationsText =
                 `\t@Modifying\n` +
                 `\t@Transactional\n` +
-                `\t@Query(value = "insert into rel_${lowDash(ejefrom)}__${keyfrom} values (${keyfrom}_id, ${lowDash(ejefrom)}_id) (${putparam})", nativeQuery = true)\n` +
+                `\t@Query(value = "insert into rel_${lowDash(ejefrom)}__${keyfrom} (${keyfrom}_id, ${lowDash(ejefrom)}_id) values (${putparam})", nativeQuery = true)\n` +
                 `\tint createRelation${eje}${firstUpper(key)}(@Param("id") UUID id, @Param("${key}Id") UUID ${key}Id);\n`;
 
             allputquery += putRelationsText + '\n';
